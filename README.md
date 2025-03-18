@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ## Usage
 > 'Output' must be without file extension
-```
+```bash
 > python.exe -m olx_parser -h
 usage: olx_parser [-h] [-u URL] [-p PAGES] [-o OUTPUT] [-j]
 
