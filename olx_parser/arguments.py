@@ -10,7 +10,7 @@ long_options = ["help", "url=", "pages=", "output=", "json"]
 def args_parse() -> dict:
     outpur_args = {
         "url": None,
-        "filename": "output.csv",
+        "filename": "output",
         "pages": 1,
         "is_json": False
     }
@@ -27,7 +27,7 @@ def args_parse() -> dict:
                 print("  -h, --help  show this help message and exit")
                 print("  -u URL      url to parse")
                 print("  -p PAGES    pages to parse (default: 1)")
-                print("  -o OUTPUT   output file name (default: output.csv)")
+                print("  -o OUTPUT   output file name (default: \"output\")")
                 print("  -j          output in json format")
                 exit(0)
                         
