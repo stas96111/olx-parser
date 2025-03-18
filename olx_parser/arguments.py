@@ -3,14 +3,15 @@ import getopt, sys
 # Remove script name from arguments
 args = sys.argv[1:]
 
-options = "hu:p:"
-long_options = ["help", "url=", "output="]
+options = "hu:p:j"
+long_options = ["help", "url=", "output=", "json"]
 
 
 def args_parse() -> dict:
     outpur_args = {
         "url": None,
-        "pages": 1
+        "pages": 1,
+        "is_json": False
     }
     
     try:
@@ -27,6 +28,9 @@ def args_parse() -> dict:
                 
             elif currentArgument in ("-p", "--pages"):
                 outpur_args["pages"] = currentValue
+                
+            elif currentArgument in ("-j", "--json"):
+                outpur_args["is_json"] = True
                 
     except getopt.error as err:
         # output error, and return with an error code
