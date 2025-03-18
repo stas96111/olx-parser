@@ -22,8 +22,15 @@ def args_parse() -> dict:
         for currentArgument, currentValue in arguments:
 
             if currentArgument in ("-h", "--help"):
-                print ("usage: olx_parser [-h] [-u URL] [-p PAGES] [-o OUTPUT] [-j]")
-                
+                print("usage: olx_parser [-h] [-u URL] [-p PAGES] [-o OUTPUT] [-j]\n")
+                print("options:")
+                print("  -h, --help  show this help message and exit")
+                print("  -u URL      url to parse")
+                print("  -p PAGES    pages to parse (default: 1)")
+                print("  -o OUTPUT   output file name (default: output.csv)")
+                print("  -j          output in json format")
+                exit(0)
+                        
             elif currentArgument in ("-u", "--url"):
                 outpur_args["url"] = currentValue
                 
