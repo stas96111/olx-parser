@@ -7,7 +7,7 @@ options = "hu:p:"
 long_options = ["help", "url=", "output="]
 
 
-def parse() -> dict:
+def args_parse() -> dict:
     outpur_args = {
         "url": None,
         "pages": 1

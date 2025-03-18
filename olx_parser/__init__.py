@@ -1,3 +1,2 @@
 from arguments import parse
-
-a = parse()
+from loader import get_page
